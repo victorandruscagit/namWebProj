@@ -2,12 +2,13 @@ package com.bookstore.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
 @Entity
 public class Users {
+	
 	private Integer userId;
 	private String email;
 	private String fullName;
@@ -15,6 +16,7 @@ public class Users {
 
 	@Column(name = "user_id")
 	@Id
+	
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Integer getUserId() {
 		return userId;
